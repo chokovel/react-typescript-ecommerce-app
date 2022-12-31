@@ -2,6 +2,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons"
 import styled from "styled-components"
 import { sliderItems } from "../data";
 import { useState } from "react";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -9,6 +10,7 @@ const Container = styled.div`
   display:flex;
   position: relative;
   overflow: hidden;  //overflow hidden is used because of the slide to hide the other slide pages.
+  ${mobile({ display: "none" })};
 ` 
 const Arrow = styled.div<DirectionProps>`
   width: 50px;
@@ -65,8 +67,10 @@ const ImgContainer = styled.div`
   `
 
 const Image = styled.img`
-  padding-top:30px;
+  padding-top:20px;
+  width: 100%;
   height: 85%;
+  object-fit: cover;
   `
 
 const InfoContainer = styled.div`
