@@ -82,7 +82,9 @@ const Navbar = () => {
                 </SearchContainer>
             </Left>
             <Center>
-                <Logo>Malish.</Logo>
+                <Link to={'/'} style={{textDecoration:"none", color:"black"}}>
+                    <Logo>Malish.</Logo>
+                </Link>
             </Center>
             <Right>
                 <Link to={'/register'} style={{textDecoration:"none", color:"black"}}>
