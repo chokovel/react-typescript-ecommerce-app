@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import Navbar from "../Components/Navbar";
 
 const Container = styled.div`
   width: 100vw;
@@ -55,17 +56,20 @@ const Button = styled.button`
 `;
 
 const Register = () => {
+
   return (
+    <>
+      <Navbar />
     <Container>
       <Wrapper>
         <Title>CREATE AN ACCOUNT</Title>
         <Form>
-          <Input placeholder="name" />
-          <Input placeholder="last name" />
-          <Input placeholder="username" />
-          <Input placeholder="email" />
-          <Input placeholder="password" />
-          <Input placeholder="confirm password" />
+          <Input placeholder="name" name="name" />
+          <Input placeholder="email" name="email" />
+          <Input placeholder="phone" name="phone"  />
+          <Input placeholder="address" name="address"  />
+          <Input placeholder="password" name="password"  />
+          <Input placeholder="confirm password" name="confirm_password"  />
           <Agreement>
             By creating an account, I consent to the processing of my personal
             data in accordance with the <b>PRIVACY POLICY</b>
@@ -74,6 +78,7 @@ const Register = () => {
         </Form>
       </Wrapper>
     </Container>
+    </>
   );
 };
 
